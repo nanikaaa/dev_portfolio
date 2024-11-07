@@ -114,7 +114,7 @@ export const AboutSection = () => {
               title="My Reads" 
               description="Explore the books shaping my perspectives."
             />
-              <div className="w-40 mx-auto mt-2 md:mt-0">
+              <div className="w-40 h-100 mx-auto md:mt-0">
                 <Image src={bookImage} alt="Book cover"/>
               </div>
             </Card>

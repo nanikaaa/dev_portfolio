@@ -59,7 +59,7 @@ export const ContactSection = () => {
             </p>
 
                   {/* Social Media Icons */}
-            <div className="flex space-x-4 mt-4 pt-6">
+            <div className="flex sm:justify-center lg:justify-start space-x-4 mt-4 pt-6">
               <a href="https://www.instagram.com/nott_yssa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram className="text-4xl text-gray-100 hover:text-teal transition-transform transform hover:scale-110" />
               </a>
