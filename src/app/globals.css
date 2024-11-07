@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .nav-item {
+        @apply px-4 py-1.5 rounded-full text-white/100 text-sm font-semibold hover:text-gradientStartLight transition duration-300 transform hover:scale-105;
+    }
+
+    .hero-ring {
+        @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-pink/5 shadow-[0_0_80px_inset] shadow-pink/5
+    }
+}
+
+@layer utilities {
+    .container {
+        @apply lg:max-w-5xl;
+    }
+    .hover-white-bg:hover {
+       @apply bg-white;
+      }
+      .glow-effect {
+        position: relative;
+        color: #f78de0; /* Adjust to match your pink shade */
+        text-shadow: 0 0 5px rgba(255, 77, 157, 0.5), 
+                     0 0 10px rgba(255, 77, 157, 0.5), 
+                     0 0 15px rgba(255, 77, 157, 0.5), 
+                     0 0 20px rgba(255, 77, 157, 0.7), 
+                     0 0 30px rgba(255, 77, 157, 0.7);
+      }
+}
