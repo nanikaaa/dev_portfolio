@@ -10,11 +10,20 @@ import SparkleIcon from '@/assets/icons/sparkle.svg';
 import { Typewriter } from 'react-simple-typewriter';
 
 export const HeroSection = () => {
+  // Google Drive link for the resume
+  const resumeLink = "https://drive.google.com/file/d/1slk0n3aV2AYRr2AK8v8MLKRfjjULC0Ef/view?usp=sharing";
+
+  // Handler for scrolling to the "about" section
+  const scrollToAbout = () => {
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div id="home" className="py- md:py-48 lg:py-60 relative z-0 overflow-x-clip">
       <div className='absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]'>
         <div className='absolute inset-0 -z-30 opacity-5' style={{ backgroundImage: `url(${grainImage.src})` }}></div>
 
+        {/* Hero Orbit Elements */}
         <div className='size-[620px] hero-ring'></div>
         <div className='size-[820px] hero-ring'></div>
         <div className='size-[1020px] hero-ring'></div>
@@ -92,14 +101,17 @@ export const HeroSection = () => {
           </div>
 
           <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
-            <button className='inline-flex items-center gap-2 border text-gray-900 border-transparent bg-white px-6 h-12 rounded-xl transition-transform transform active:scale-95 hover:text-white hover:bg-button-gradient'>
+            <button 
+              onClick={scrollToAbout} 
+              className='inline-flex items-center gap-2 border text-gray-900 border-transparent bg-white px-6 h-12 rounded-xl transition-transform transform active:scale-95 hover:text-white hover:bg-button-gradient'>
               <span className='font-semibold'>Explore My Work</span>   
               <ArrowDown className='size-4' />
             </button>
 
-            <button className='inline-flex items-center gap-2 border-transparent bg-button-gradient text-white-900 h-12 px-6 rounded-xl transition-transform transform active:scale-95 hover:text-gray-900 hover:white-bg'>
-              <span className='font-semibold'>Let&apos;s Connect</span>
-              <span>👋</span>
+            <button 
+              onClick={() => window.open(resumeLink, "_blank")} 
+              className='inline-flex items-center gap-2 border-transparent bg-button-gradient text-white-900 h-12 px-6 rounded-xl transition-transform transform active:scale-95 hover:text-gray-900 hover:white-bg'>
+              <span className='font-semibold'>View My Resume</span>
             </button>
           </div>
         </div>

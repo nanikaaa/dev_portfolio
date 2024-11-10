@@ -109,8 +109,8 @@ const EducationSection = () => {
                   key={index}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: false, amount: 0.2 }}
-                  transition={{ duration: 0.2, delay: index * 0.2 }}
+                  viewport={{ once: false, amount: 0.1 }}
+                  transition={{ duration: 0.1, delay: index * 0.2 }}
                   variants={cardVariants}
                   className={`flex items-center ${isLeft ? 'justify-start mr-20' : 'justify-end ml-20'} relative`}
                 >
